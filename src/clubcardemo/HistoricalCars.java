@@ -1,10 +1,10 @@
 package clubcardemo;
 
-public class Cars {
+class HistoricalCars {
     private int carID, carReqLaps, carLapsLeft, lapsHr, dailyHours, maxLaps, totalDays, workDays;
     private String trNo, projectName, requestor, testEng, testTech, carType, fuelType, startDate, needDate, status, forecastDate, dateDone;
-    
-    public Cars(int carID, String trNo, String projectName, String requestor, String testEng, String testTech, String carType, String fuelType, int carReqLaps, int carLapsLeft,
+    //possibly add date done to this
+    public HistoricalCars(int carID, String trNo, String projectName, String requestor, String testEng, String testTech, String carType, String fuelType, int carReqLaps, int carLapsLeft,
         int lapsHr, int dailyHours, int maxLaps, String startDate, String needDate, String status, int totalDays, int workDays, String forecastDate, String dateDone) {
             this.carID = carID;
             this.trNo = trNo;
