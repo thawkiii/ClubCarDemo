@@ -505,7 +505,6 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
         jButtonCarsDelete = new javax.swing.JButton();
         jDateChooserCarsNeedDate = new com.toedter.calendar.JDateChooser();
         jDateChooserCarsStartDate = new com.toedter.calendar.JDateChooser();
-        jLabel31 = new javax.swing.JLabel();
         jTextCarsTestEng = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         jTextCarsTestTech = new javax.swing.JTextField();
@@ -834,13 +833,6 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
 
         jDateChooserCarsStartDate.setDateFormatString("yyyy-MM-dd");
 
-        jLabel31.setText("Advanced Options");
-        jLabel31.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel31MouseClicked(evt);
-            }
-        });
-
         jLabel32.setText("Test Eng.");
 
         jLabel33.setText("Test Tech");
@@ -1075,8 +1067,7 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
                         .addGap(13, 13, 13))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelCarsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelCarsLayout.createSequentialGroup()
-                            .addComponent(jLabel31)
-                            .addGap(327, 327, 327)
+                            .addGap(425, 425, 425)
                             .addComponent(jLabel2)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jComboBoxCarsStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1089,7 +1080,6 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
             .addGroup(jPanelCarsLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanelCarsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
                     .addComponent(jLabel2)
                     .addComponent(jComboBoxCarsStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2336,18 +2326,6 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonScheduleInsertActionPerformed
 
-    private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
-        // TODO add your handling code here:
-        if (JOptionPane.showConfirmDialog(null, "Go to forecasting page?", "Advanced Options",
-        JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-            Parent.removeAll();
-            Parent.add(jPanelForecast);
-            Parent.repaint();
-            Parent.revalidate();
-        } else {
-        }
-    }//GEN-LAST:event_jLabel31MouseClicked
-
     private void jRadioButtonCarsFuelGasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCarsFuelGasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonCarsFuelGasActionPerformed
@@ -2860,7 +2838,6 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
