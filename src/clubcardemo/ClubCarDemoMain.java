@@ -2020,7 +2020,7 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
             String query1 = "DELETE FROM `clubcar`.`car` " +
                             "WHERE `carID` = ? AND `TRNo` = ? AND `projectName` = ? AND `requestor` = ? AND " + 
                             "`testEng` = ? AND `testTech` = ? AND `carType` = ? AND `fuelType` = ? AND " + 
-                            "`carRequiredLaps` = ? AND `carActualLaps` = ? AND `lapsHr` = ? AND " + 
+                            "`carRequiredLaps` = ? AND `carLapsLeft` = ? AND `lapsHr` = ? AND " + 
                             "`dailyHours` = ? AND `needDate` = ? AND `status` = ?;";
             PreparedStatement pst = connection.prepareStatement(query1);
             pst.setString(1, model.getValueAt(i, 0).toString());
@@ -2062,12 +2062,12 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
             String query1 = "UPDATE `clubcar`.`car` " +
                             "SET `carID` = ?, `TRNo` = ?, `projectName` = ?, `requestor` = ?, " + 
                             "`testEng` = ?, `testTech` = ?, `carType` = ?, `fuelType` = ?, " + 
-                            "`carRequiredLaps` = ?, `carActualLaps` = ?, `lapsHr` = ?, `dailyHours` = ?, " + 
-                            "`maxLaps` = ?, `startDate` = ?, `needDate` = ?, `status` = ? " +
+                            "`carRequiredLaps` = ?, `carLapsLeft` = ?, `lapsHr` = ?, `dailyHours` = ?, " + 
+                            "`maxLaps` = ?, `startDate` = ?, `needDate` = ?, `status` = ? " + //16
                             "WHERE `carID` = ? AND `TRNo` = ? AND `projectName` = ? AND `requestor` = ? AND " + 
                             "`testEng` = ? AND `testTech` = ? AND `carType` = ? AND `fuelType` = ? AND " + 
-                            "`carRequiredLaps` = ? AND `carActualLaps` = ? AND `lapsHr` = ? AND " + 
-                            "`dailyHours` = ? AND `needDate` = ? AND `status` = ?;";
+                            "`carRequiredLaps` = ? AND `carLapsLeft` = ? AND `lapsHr` = ? AND " + 
+                            "`dailyHours` = ? AND `needDate` = ? AND `status` = ?;"; //30
             PreparedStatement pst = connection.prepareStatement(query1);
             pst.setString(1, jTextCarsCarID.getText());
             pst.setString(2, jTextCarsTRNo.getText());
@@ -2082,7 +2082,7 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
                 pst.setString(8, "G");
             }
             pst.setString(9, jTextCarsReqLaps.getText());
-            pst.setString(10, jTextCarsActLaps.getText());
+            pst.setString(10, jTextCarsLapsLeft.getText());
             pst.setString(11, jTextCarsLapsHr.getText());
             pst.setString(12, jTextCarsTotalDailyHours.getText());
             pst.setString(13, jTextCarsMaxLaps.getText());
@@ -2102,7 +2102,7 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
             pst.setString(23, model.getValueAt(i, 6).toString());
             pst.setString(24, model.getValueAt(i, 7).toString());
             pst.setString(25, model.getValueAt(i, 8).toString());
-            pst.setString(26, model.getValueAt(i, 9).toString());
+            pst.setString(26, model.getValueAt(i, 10).toString());
             pst.setString(27, model.getValueAt(i, 11).toString());
             pst.setString(28, model.getValueAt(i, 12).toString());
             pst.setString(29, model.getValueAt(i, 14).toString());
@@ -2129,7 +2129,7 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
             Connection connection = DriverManager.getConnection(dbURL, username, password);
             String query1 = "INSERT INTO `clubcar`.`car` " +
                             "(`carID`, `TRNo`, `projectName`, `requestor`, `testEng`, `testTech`, `carType`, " + 
-                            "`fuelType`, `carRequiredLaps`, `carActualLaps`, `lapsHr`, `dailyHours`, `maxLaps`, " + 
+                            "`fuelType`, `carRequiredLaps`, `carLapsLeft`, `lapsHr`, `dailyHours`, `maxLaps`, " + 
                             "`startDate`, `needDate`, `status`) " +
                             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); ";
             PreparedStatement pst = connection.prepareStatement(query1);
@@ -2146,7 +2146,7 @@ public class ClubCarDemoMain extends javax.swing.JFrame {
                 pst.setString(8, "G");
             }
             pst.setString(9, jTextCarsReqLaps.getText());
-            pst.setString(10, jTextCarsActLaps.getText());
+            pst.setString(10, jTextCarsLapsLeft.getText());
             pst.setString(11, jTextCarsLapsHr.getText());
             pst.setString(12, jTextCarsTotalDailyHours.getText());
             pst.setString(13, jTextCarsMaxLaps.getText());
